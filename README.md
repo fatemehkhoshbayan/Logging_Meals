@@ -1,2 +1,2 @@
-# Logging_Meals
-Possibility to log all of meals you will have during a day.
+# Shopping List
+Make a huge list of shopping, so you can not forget your groceries.
