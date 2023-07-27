@@ -7,10 +7,10 @@ const initApp = (): void => {
   const fullList = FullList.instance;
   const template = ListTemplate.instance;
 
-  const intemEntrayForm = document.getElementById(
-    "intemEntrayForm"
+  const itemEntryForm = document.getElementById(
+    "itemEntryForm"
   ) as HTMLFormElement;
-  intemEntrayForm.addEventListener("submit", (event: SubmitEvent): void => {
+  itemEntryForm.addEventListener("submit", (event: SubmitEvent): void => {
     event.preventDefault();
 
     const input = document.getElementById("newItem") as HTMLInputElement;
