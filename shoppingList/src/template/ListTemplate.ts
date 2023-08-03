@@ -7,9 +7,10 @@ interface DOMList {
 }
 
 export default class ListTemplate implements DOMList {
-  static instance: ListTemplate = new ListTemplate();
 
   ul: HTMLUListElement;
+
+  static instance: ListTemplate = new ListTemplate();
 
   private constructor() {
     this.ul = document.getElementById("listItems") as HTMLUListElement;
@@ -21,6 +22,7 @@ export default class ListTemplate implements DOMList {
 
   render(fullList: FullList): void {
     this.clear();
+
     fullList.list.forEach((item) => {
       const li = document.createElement("li") as HTMLLIElement;
       li.className = "item";
@@ -36,7 +38,7 @@ export default class ListTemplate implements DOMList {
 
       const lable = document.createElement("lable") as HTMLLabelElement;
       lable.htmlFor = item.id;
-      lable.innerText = item.item;
+      lable.textContent = item.item;
       li.append(lable);
 
       const button = document.createElement("button") as HTMLButtonElement;

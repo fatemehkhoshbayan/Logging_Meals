@@ -13,8 +13,7 @@
 }
 
 input,
-button,
-textarea {
+button {
   font: inherit;
 }
 
@@ -149,25 +148,26 @@ h3 {
   display: flex;
   flex-flow: column nowrap;
   list-style-type: none;
+  list-style: none;
 }
 
 .item {
   display: flex;
+  justify-content: flex-start;
   align-items: center;
   padding-top: 1em;
   gap: 1em;
 }
 
-.item > input[type="checkbox"] {
+.item input[type="checkbox"] {
   text-align: center;
   min-width: 2rem;
   min-height: 2rem;
   cursor: pointer;
 }
 
-.item > input[type="checkbox"]:checked + .item__label{
+.item > input[type=checkbox]:checked + label{
   text-decoration: line-through;
-  /* text-decoration-line: line-through; */
 }
 
 .item > label {
@@ -175,10 +175,11 @@ h3 {
   word-break: break-all;
 }
 
-.item > button {
+.item > .button {
   font-size: medium;
   min-width: 35px;
   min-height: 35px;
+  margin-left: auto;
 }
 
 .item > button:hover,
